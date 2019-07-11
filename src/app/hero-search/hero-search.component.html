@@ -1,0 +1,10 @@
+<p>hero-search works!</p>
+<div class="search-component">
+    <h1><label for="">Hello Search</label></h1>
+    <input type="text" #searchBox (input)="search(searchBox.value)">
+    <ul class="search-result" *ngFor="let hero of heroes$ | async">
+        <li>
+            <a routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+        </li>
+    </ul>
+</div>
